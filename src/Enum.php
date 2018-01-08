@@ -7,18 +7,25 @@ use Zerobit\Support\Exceptions\ValidationException;
 abstract class Enum
 {
     protected $value;
+    protected $lowerCase;
 
-    public function __construct(string $value)
+    public function __construct(string $value, bool $lowerCase = false)
     {
+        $this->lowerCase = $lowerCase;
         $this->validate($value);
-        $this->value = strtoupper($value);
+        $this->value = $this->adjustCase($value);
+    }
+
+    private function adjustCase($value)
+    {
+        return $this->lowerCase ? strtolower($value) : strtoupper($value);
     }
 
     private function validate($value)
     {
         $obj = new \ReflectionClass(get_called_class());
         $constants = $obj->getConstants();
-        $valid = in_array(strtoupper($value), $constants);
+        $valid = in_array($this->adjustCase($value), $constants);
         if (!$valid) {
             throw new ValidationException(
                 'Value not allowed for ' . get_called_class()

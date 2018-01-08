@@ -8,8 +8,8 @@ class EnumTest extends PHPUnit\Framework\TestCase
     /** @test */
     public function shouldCreateEnum()
     {
-        $enum = new EnumImpl('001');
-        $this->assertEquals('001', $enum);
+        $enum = new EnumImpl('VALUE001');
+        $this->assertEquals('VALUE001', $enum);
     }
 
     /** @test */
@@ -17,9 +17,9 @@ class EnumTest extends PHPUnit\Framework\TestCase
     {
         $all = EnumImpl::all();
 
-        $this->assertTrue(in_array('001', $all));
-        $this->assertTrue(in_array('002', $all));
-        $this->assertFalse(in_array('003', $all));
+        $this->assertTrue(in_array('VALUE001', $all));
+        $this->assertTrue(in_array('VALUE002', $all));
+        $this->assertFalse(in_array('VALUE003', $all));
     }
 
     /** @test */
@@ -28,10 +28,31 @@ class EnumTest extends PHPUnit\Framework\TestCase
         $this->expectException(ValidationException::class);
         $enum = new EnumImpl('101');
     }
+
+    /** @test */
+    public function shouldCreateLowerEnum()
+    {
+        $enum = new LowerEnumImpl('value01');
+        $this->assertEquals('value01', $enum);
+
+        $enum = new LowerEnumImpl('VALUE02');
+        $this->assertEquals('value02', $enum);
+    }
 }
 
 class EnumImpl extends Enum
 {
-    const VALUE1 = '001';
-    const VALUE2 = '002';
+    const VALUE1 = 'VALUE001';
+    const VALUE2 = 'VALUE002';
+}
+
+class LowerEnumImpl extends Enum
+{
+    const VALUE1 = 'value01';
+    const VALUE2 = 'value02';
+
+    public function __construct($value)
+    {
+        parent::__construct($value, true);
+    }
 }
