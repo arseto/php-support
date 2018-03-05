@@ -3,14 +3,9 @@ namespace Zerobit\Support\Exceptions;
 
 class UnauthenticatedException extends AppException
 {
-    public function toArray() : array
+    public function __construct($message = null, Exception $previous = null)
     {
-        return [
-            'dev_message' => $this->getMessage(),
-            'user_message' => $this->getMessage(),
-            'code' => 401,
-            'more_info' => '@arseto',
-        ];
+        parent::__construct($message, 401, $previous);
     }
 }
 

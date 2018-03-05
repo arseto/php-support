@@ -3,14 +3,9 @@ namespace Zerobit\Support\Exceptions;
 
 class InternalException extends AppException
 {
-    public function toArray() : array
+    public function __construct($message = null, Exception $previous = null)
     {
-        return [
-            'dev_message' => $this->getMessage(),
-            'user_message' => $this->getMessage(),
-            'code' => 500,
-            'more_info' => '@arseto',
-        ];
+        parent::__construct($message, 500, $previous);
     }
 }
 
