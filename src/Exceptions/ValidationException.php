@@ -3,7 +3,7 @@ namespace Zerobit\Support\Exceptions;
 
 class ValidationException extends AppException
 {
-    public function toArray()
+    public function toArray() : array
     {
         return [
             'dev_message' => $this->getMessage(),

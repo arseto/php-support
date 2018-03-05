@@ -1,7 +1,10 @@
 <?php
 namespace Zerobit\Support\Exceptions;
 
-class AppException extends \Exception
+use Zerobit\Support\Arrayable;
+
+abstract class AppException extends \Exception implements Arrayable
 {
+    public abstract function toArray() : array;
 }
 
