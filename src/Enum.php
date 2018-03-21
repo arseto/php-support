@@ -47,6 +47,14 @@ abstract class Enum
         return $all;
     }
 
+    public static function allValues()
+    {
+        $all = self::all();
+        return array_map(function ($item) {
+            return (string)$item;
+        }, $all);
+    }
+
     public function value() : string
     {
         return $this->value;
