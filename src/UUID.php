@@ -1,7 +1,8 @@
 <?php
-namespace Zerobit\Support;
 
-use Zerobit\Support\Exceptions\ValidationException;
+namespace Arseto\Support;
+
+use Arseto\Support\Exceptions\ValidationException;
 
 class UUID
 {

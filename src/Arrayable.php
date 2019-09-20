@@ -1,5 +1,6 @@
 <?php
-namespace Zerobit\Support;
+
+namespace Arseto\Support;
 
 interface Arrayable
 {

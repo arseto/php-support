@@ -1,7 +1,7 @@
 <?php
 
-use Zerobit\Support\Enum;
-use Zerobit\Support\Exceptions\ValidationException;
+use Arseto\Support\Enum;
+use Arseto\Support\Exceptions\ValidationException;
 
 class EnumTest extends PHPUnit\Framework\TestCase
 {

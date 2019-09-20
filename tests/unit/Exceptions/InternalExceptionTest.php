@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory as Faker;
-use Zerobit\Support\Exceptions\InternalException;
+use Arseto\Support\Exceptions\InternalException;
 
 class InternalExceptionTest extends PHPUnit\Framework\TestCase
 {

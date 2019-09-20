@@ -1,5 +1,6 @@
 <?php
-namespace Zerobit\Support\Exceptions;
+
+namespace Arseto\Support\Exceptions;
 
 class ValidationException extends AppException
 {

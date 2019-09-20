@@ -1,5 +1,5 @@
 {
-    "name": "zerobit/support",
+    "name": "arseto/php-support",
     "description": "Collection of supportive PHP libraries",
     "type": "library",
     "license": "MIT",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Zerobit\\Support\\": "src/"
+            "Arseto\\Support\\": "src/"
         }
     }
 }

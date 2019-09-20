@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory as Faker;
-use Zerobit\Support\Exceptions\UnauthenticatedException;
+use Arseto\Support\Exceptions\UnauthenticatedException;
 
 class UnauthenticatedExceptionTest extends PHPUnit\Framework\TestCase
 {

@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory as Faker;
-use Zerobit\Support\Exceptions\RepositoryException;
+use Arseto\Support\Exceptions\RepositoryException;
 
 class RepositoryExceptionTest extends PHPUnit\Framework\TestCase
 {

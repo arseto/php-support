@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use Zerobit\Support\UUID;
-use Zerobit\Support\Exceptions\ValidationException;
+use Arseto\Support\UUID;
+use Arseto\Support\Exceptions\ValidationException;
 
 class UUIDTest extends PHPUnit\Framework\TestCase
 {

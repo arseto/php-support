@@ -1,6 +1,6 @@
 <?php
 
-namespace Zerobit\Support;
+namespace Arseto\Support;
 
 abstract class DataAdapter implements \ArrayAccess, Arrayable
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Zerobit\Support;
+namespace Arseto\Support;
 
-use Zerobit\Support\Exceptions\ValidationException;
+use Arseto\Support\Exceptions\ValidationException;
 
 abstract class Enum
 {

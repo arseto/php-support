@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory as Faker;
-use Zerobit\Support\Exceptions\ValidationException;
+use Arseto\Support\Exceptions\ValidationException;
 
 class ValidationExceptionTest extends PHPUnit\Framework\TestCase
 {

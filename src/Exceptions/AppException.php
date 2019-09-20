@@ -1,7 +1,8 @@
 <?php
-namespace Zerobit\Support\Exceptions;
 
-use Zerobit\Support\Arrayable;
+namespace Arseto\Support\Exceptions;
+
+use Arseto\Support\Arrayable;
 
 abstract class AppException extends \Exception implements Arrayable
 {

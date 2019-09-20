@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory as Faker;
-use Zerobit\Support\Exceptions\NotFoundException;
+use Arseto\Support\Exceptions\NotFoundException;
 
 class NotFoundExceptionTest extends PHPUnit\Framework\TestCase
 {
